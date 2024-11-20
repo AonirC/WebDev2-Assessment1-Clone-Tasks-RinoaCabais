@@ -1,0 +1,229 @@
+body {
+    background-color: #231651; /* Dark purple background for the entire page */
+    font-family: 'Lato', sans-serif; /* Primary font for the website */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.header {
+    background-color: #070410; /* Dark background for the header */
+    padding: 16px; /* Add space inside the header */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out elements evenly */
+    align-items: center; /* Center items vertically */
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2)); /* Add shadow effect */
+}
+
+/* Header title styles */
+.header h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 2em; /* Increase font size */
+    font-family: 'Teko', sans-serif; /* Use a bold and impactful font */
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    gap: 16px; 
+}
+
+.nav a {
+    text-decoration: none; 
+    color: #FFFFFF; 
+    font-family: 'Lato', sans-serif; 
+}
+
+.search {
+    border: 2px solid black; 
+    padding: 5px 10px; 
+    font-size: 2em; 
+    font-family: 'Teko', sans-serif; 
+    border-radius: 8px; 
+    cursor: pointer; 
+}
+
+.search:hover {
+    background-color: #0056b3; 
+    color: white; 
+}
+
+
+main {
+    padding: 32px; 
+    max-width: 900px; 
+    margin: 0 auto;
+}
+
+.container {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 32px; 
+}
+
+
+.movie-card {
+    background-color: #EEF36A;
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 16px;
+    margin-bottom: 16px; 
+    font-size: 1.5em; 
+    text-align: center; 
+    gap: 16px; 
+}
+
+.movie-title {
+    font-weight: bold; 
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2em; 
+}
+
+.movie-description {
+    font-family: 'Lato', sans-serif; 
+    font-size: 1em; 
+    text-align: left; 
+}
+
+.movie-poster {
+    width: 100%; 
+    height: 300px; 
+    border-radius: 8px; 
+    object-fit: cover; 
+    margin-bottom: 10px; 
+}
+
+
+.watch-now {
+    width: 100%; 
+    background-color: #0056b3; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    font-family: 'Teko', sans-serif; 
+    font-size: 2em;
+    transition: background-color 0.3s ease; 
+    padding: 8px; 
+    border-radius: 20px; 
+    margin-top: 16px; 
+}
+
+.watch-now:hover {
+    background-color: #4DCCBD; 
+}
+
+@media (min-width: 720px) {
+    .header h1 {
+        font-size: 3em; 
+    }
+
+    .container {
+        padding: 32px; 
+    }
+
+    .two-card-row {
+        display: flex; 
+        gap: 32px; 
+        justify-content: space-between; 
+    }
+
+    .two-card-row .movie-card {
+        width: 48%; 
+    }
+    .last-card{
+        display: none; 
+    }
+}
+
+
+
+.first-row-layout .movie-card-content {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 16px; 
+}
+
+.first-row-layout .movie-description {
+    flex: 1; 
+    text-align: left; 
+    max-width: 100%; 
+}
+
+.first-row-layout .watch-now {
+    align-self: flex-start; 
+    font-size: 1.2em; 
+    padding: 8px 16px; 
+    width: 280px; 
+    height: 220px; 
+    border-radius: 20px; 
+}
+
+
+.horizontal-layout {
+    display: flex; 
+    gap: 32px; 
+    align-items: flex-start; 
+    text-align: left; 
+}
+
+.horizontal-layout .movie-poster {
+    width: 100%; 
+    height: auto; 
+    max-height: 300px; 
+}
+
+.horizontal-layout .text-content {
+    width: 100%; 
+}
+        
+@media (max-width: 720px) {
+    .nav a {
+        display: none; 
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+    .first-row-layout{
+        display: none; 
+    }
+    .three-card-row{
+        display: flex; 
+        gap: 32px;
+        justify-content: space-between;
+    }
+    .last-card{
+        display: contents;
+    }
+    .four-card-row{
+        display: flex; 
+        gap: 32px; 
+        justify-content: space-between; 
+    }
+    .whole-card{
+        display: none; 
+    }
+    .movie-description{
+        height: 42%; 
+    }
+    .movie-card{
+        padding-bottom: 8vw; 
+    }
+}
+
+@media (max-width: 767px){
+    .last-card{
+        display: none; 
+    }
+    .whole-card{
+        display: none; 
+    }
+
+}
+
+@media (min-width : 1024px){
+    .tab-card{
+        display: none; 
+    }
+}

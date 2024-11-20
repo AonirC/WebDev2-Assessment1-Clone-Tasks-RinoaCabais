@@ -1,0 +1,448 @@
+/* sets text color, background color, font family, and removes default margins and padding for body */
+body {
+  color: #333;
+  background-color: #e9e9e9;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+
+}
+/* centers content and adjusts spacing for header section styling */
+header {
+  padding-bottom: -10%;
+  text-align: center;
+}
+/* Logo styling: defines size of the logo image */
+.logo {
+   width: 80px;
+   height: 80px;
+
+} 
+/* Main content area: styles the layout, background, and spacing for the primary container */
+main {
+  background-color: white;
+  margin: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Heading styles: font, size, and spacing for headings */
+h1 {
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-size: 2em;
+  margin-bottom: 12px;
+  color: #14181d;
+}
+
+h2 {
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-size: 1.5em;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  color: #14181d;
+
+}
+/* Special styling for the first paragraph */
+.first-paragraph {
+  font-size: 1.2em;
+  margin-bottom: 12px;
+
+}
+/* General paragraph style */
+p {
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* uses flexbox to arrange album covers with spacing */
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; 
+
+}
+/* occupies half the space with an image taking full width */
+.left {
+  flex: 1; 
+}
+
+.left img {
+  width: 100%; 
+  height: auto;
+
+}
+/* flexbox for column layout and evenly spaced content */
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1; 
+
+}
+/* horizontally aligns content */
+.row {
+  display: flex;
+  justify-content: space-between; 
+}
+
+.right img {
+  width: 23%; 
+  height: auto;
+
+}
+/* Album cover styling: grid-based layout for album images */
+.featured-album {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    width: 100%;
+    height: 95%;
+    object-fit: cover;
+}
+
+.album-cover {
+    grid-row: 1 / span 2;
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.album-cover:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.album-cover:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.album-cover:nth-child(4) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.album-cover:nth-child(5) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+/* circular author image with fixed size */
+.author-photo {
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 12px;
+}
+/* Footer styling: dark background with centered white text */
+footer {
+  background-color: #14181d;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+/* Layout for sections with headings: uses flexbox with responsive wrapping */
+.heading-row {
+  display: flex;
+  gap: 20px; 
+  justify-content: space-between;
+  flex-wrap: wrap; 
+  column-count: 3;
+}
+
+.heading-section {
+  flex: 1;
+  min-width: 250px; 
+}
+
+.heading-section h2 {
+  margin: 0;
+  font-size: 1.5em;
+  font-family: 'Protest Guerrilla', sans-serif;
+}
+
+.heading-section p {
+  margin-top: 8px;
+  font-size: 1em;
+}
+
+
+/* Responsive styles for large mobiles */
+@media (min-width: 540px) {
+  header {
+      padding: 20px;
+  }
+  main {
+      margin: 20px;
+      padding: 20px;
+  }
+}
+
+/* Responsive styles for tablets */
+@media (min-width: 720px) {
+  header {
+      padding: 30px;
+  }
+  main {
+      margin: 30px;
+      padding: 30px;
+  }
+  .logo {
+      width: 80px;
+  }
+}
+
+/* Responsive styles for large screens */
+@media (min-width: 1024px) {
+  header {
+      padding: 50px;
+      margin-bottom: -5vw;
+  }
+  .logo {
+      width: 80px;
+  }
+  main {
+      margin: 50px;
+      padding: 50px;
+  }
+  h1 {
+      font-size: 4em;
+  }
+  .first-paragraph {
+      font-size: 1.5em; 
+  }
+}
+
+/* Removes underline and sets color of Navigation link style */
+nav a {
+  text-decoration: none;
+  color: #14181d;
+}
+/* Evenly distributed links horizontally for Navigation bar layout */
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+.image-container {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.featured-album {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  width: 100%;
+  height: 95%;
+  object-fit: cover;
+}
+
+.album-cover {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.album-cover:nth-child(2) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.album-cover:nth-child(3) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.album-cover:nth-child(4) {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.album-cover:nth-child(5) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+
+
+.author-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  padding: 20px;
+}
+
+
+.author-content {
+  display: flex;
+  gap: 5%; 
+  align-items: center;
+  width: 74%;
+  justify-content: center; 
+  text-align: center;
+}
+
+
+.author-text {
+  flex: 1; 
+}
+
+
+.author-photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.author-photo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+
+.author-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.author-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 74%;
+  gap: 5%;
+  flex-wrap: wrap; 
+  text-align: center; 
+}
+.author-text p {
+  text-align: left;
+}
+
+
+.author-photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.author-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+
+.author-text {
+  flex: 1;
+}
+
+/* Responsive layout for authors section and image containers for smaller devices */
+@media screen and (max-width: 768px) {
+  .author-content {
+      flex-direction: column; 
+      width: 90%;
+      gap: 20px;
+  }
+  article h1{
+      text-align: center;
+  }
+
+ 
+  .author-photo-container {
+      order: -1; 
+  }
+
+  .author-photo {
+      width: 120px;
+      height: 120px;
+  }
+  .image-container {
+      display: block
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .author-content {
+      width: 100%;
+  }
+  article h1{
+      text-align: center;
+  }
+  /* Move image to top */
+  .author-photo-container {
+      order: -1; 
+  }
+  .author-photo {
+      width: 100px;
+      height: 100px;
+  }
+  .author-text h2 {
+      text-align: center;
+  }
+  .author-text p {
+      text-align: left;
+  }   
+  .image-container {
+      display: block
+  } 
+}
+
+/* Large Screens */
+@media screen and (min-width: 769px) {
+  .author-content {
+      flex-direction: row; 
+  }
+
+  .author-photo-container {
+      order: 1; 
+  }
+
+  .author-text h2 {
+      text-align: center; 
+  }
+  .author-text p {
+      text-align: left;
+  }
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
+  gap: 6px;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+img.four-grid-cells {
+  grid-row: span 2 / auto;
+  grid-column: span 2 / auto;
+}
+
+/* div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+} */
+
+
+
+
